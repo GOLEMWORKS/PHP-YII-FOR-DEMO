@@ -2,16 +2,16 @@
 
 namespace app\controllers;
 
-use app\models\Country;
-use app\models\CountrySearchModel;
+use app\models\GroomingRecords;
+use app\models\GroomingRecordsSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * CountryController implements the CRUD actions for Country model.
+ * GroomingRecordsController implements the CRUD actions for GroomingRecords model.
  */
-class CountryController extends Controller
+class GroomingRecordsController extends Controller
 {
     /**
      * @inheritDoc
@@ -32,13 +32,13 @@ class CountryController extends Controller
     }
 
     /**
-     * Lists all Country models.
+     * Lists all GroomingRecords models.
      *
      * @return string
      */
     public function actionIndex()
     {
-        $searchModel = new CountrySearchModel();
+        $searchModel = new GroomingRecordsSearch();
         $dataProvider = $searchModel->search($this->request->queryParams);
 
         return $this->render('index', [
@@ -48,30 +48,30 @@ class CountryController extends Controller
     }
 
     /**
-     * Displays a single Country model.
-     * @param string $code Code
+     * Displays a single GroomingRecords model.
+     * @param int $id ID
      * @return string
      * @throws NotFoundHttpException if the model cannot be found
      */
-    public function actionView($code)
+    public function actionView($id)
     {
         return $this->render('view', [
-            'model' => $this->findModel($code),
+            'model' => $this->findModel($id),
         ]);
     }
 
     /**
-     * Creates a new Country model.
+     * Creates a new GroomingRecords model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return string|\yii\web\Response
      */
     public function actionCreate()
     {
-        $model = new Country();
+        $model = new GroomingRecords();
 
         if ($this->request->isPost) {
             if ($model->load($this->request->post()) && $model->save()) {
-                return $this->redirect(['view', 'code' => $model->code]);
+                return $this->redirect(['view', 'id' => $model->id]);
             }
         } else {
             $model->loadDefaultValues();
@@ -83,18 +83,18 @@ class CountryController extends Controller
     }
 
     /**
-     * Updates an existing Country model.
+     * Updates an existing GroomingRecords model.
      * If update is successful, the browser will be redirected to the 'view' page.
-     * @param string $code Code
+     * @param int $id ID
      * @return string|\yii\web\Response
      * @throws NotFoundHttpException if the model cannot be found
      */
-    public function actionUpdate($code)
+    public function actionUpdate($id)
     {
-        $model = $this->findModel($code);
+        $model = $this->findModel($id);
 
         if ($this->request->isPost && $model->load($this->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'code' => $model->code]);
+            return $this->redirect(['view', 'id' => $model->id]);
         }
 
         return $this->render('update', [
@@ -103,29 +103,29 @@ class CountryController extends Controller
     }
 
     /**
-     * Deletes an existing Country model.
+     * Deletes an existing GroomingRecords model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
-     * @param string $code Code
+     * @param int $id ID
      * @return \yii\web\Response
      * @throws NotFoundHttpException if the model cannot be found
      */
-    public function actionDelete($code)
+    public function actionDelete($id)
     {
-        $this->findModel($code)->delete();
+        $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
     }
 
     /**
-     * Finds the Country model based on its primary key value.
+     * Finds the GroomingRecords model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
-     * @param string $code Code
-     * @return Country the loaded model
+     * @param int $id ID
+     * @return GroomingRecords the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
-    protected function findModel($code)
+    protected function findModel($id)
     {
-        if (($model = Country::findOne(['code' => $code])) !== null) {
+        if (($model = GroomingRecords::findOne(['id' => $id])) !== null) {
             return $model;
         }
 
