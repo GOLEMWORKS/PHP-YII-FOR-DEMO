@@ -2,16 +2,16 @@
 
 namespace app\controllers;
 
-use app\models\GroomingRecords;
-use app\models\GroomingRecordsSearch;
+use app\models\GroomingClient;
+use app\models\GroomingClientsSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * GroomingRecordsController implements the CRUD actions for GroomingRecords model.
+ * GroomingClientsController implements the CRUD actions for GroomingClient model.
  */
-class GroomingRecordsController extends Controller
+class GroomingClientsController extends Controller
 {
     /**
      * @inheritDoc
@@ -32,13 +32,13 @@ class GroomingRecordsController extends Controller
     }
 
     /**
-     * Lists all GroomingRecords models.
+     * Lists all GroomingClient models.
      *
      * @return string
      */
     public function actionIndex()
     {
-        $searchModel = new GroomingRecordsSearch();
+        $searchModel = new GroomingClientsSearch();
         $dataProvider = $searchModel->search($this->request->queryParams);
 
         return $this->render('index', [
@@ -48,7 +48,7 @@ class GroomingRecordsController extends Controller
     }
 
     /**
-     * Displays a single GroomingRecords model.
+     * Displays a single GroomingClient model.
      * @param int $id ID
      * @return string
      * @throws NotFoundHttpException if the model cannot be found
@@ -61,13 +61,13 @@ class GroomingRecordsController extends Controller
     }
 
     /**
-     * Creates a new GroomingRecords model.
+     * Creates a new GroomingClient model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return string|\yii\web\Response
      */
     public function actionCreate()
     {
-        $model = new GroomingRecords();
+        $model = new GroomingClient();
 
         if ($this->request->isPost) {
             if ($model->load($this->request->post()) && $model->save()) {
@@ -83,7 +83,7 @@ class GroomingRecordsController extends Controller
     }
 
     /**
-     * Updates an existing GroomingRecords model.
+     * Updates an existing GroomingClient model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param int $id ID
      * @return string|\yii\web\Response
@@ -103,7 +103,7 @@ class GroomingRecordsController extends Controller
     }
 
     /**
-     * Deletes an existing GroomingRecords model.
+     * Deletes an existing GroomingClient model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param int $id ID
      * @return \yii\web\Response
@@ -117,15 +117,15 @@ class GroomingRecordsController extends Controller
     }
 
     /**
-     * Finds the GroomingRecords model based on its primary key value.
+     * Finds the GroomingClient model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param int $id ID
-     * @return GroomingRecords the loaded model
+     * @return GroomingClient the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = GroomingRecords::findOne(['id' => $id])) !== null) {
+        if (($model = GroomingClient::findOne(['id' => $id])) !== null) {
             return $model;
         }
 
