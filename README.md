@@ -9,7 +9,7 @@
     <li>Скопировать с заменой все файлы из архива репозитория в папку с Yii</li>
 </ul>
 
-<img src="https://webformyself.com/wp-content/uploads/2017/300/1.jpg"></img>
+<img src="[https://webformyself.com/wp-content/uploads/2017/300/1.jpg](https://imgur.com/a/nO06L9d)"></img>
 
 <h2>После установки требуется зайти в PhPMyAdmin и создать базу данных "Yii2basic", а так же несколько таблиц. Код для таблиц представлен ниже. Всё это копируем в раздел SQL в БД.</h2>
 <pre>
