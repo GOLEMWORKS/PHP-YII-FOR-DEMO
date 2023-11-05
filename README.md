@@ -1,10 +1,14 @@
 <h1>Чтобы файлы из этого репозитория запустились нужно сделать следующее:</h1>
 <ul>
-    <li>Скачать Yii2 basic template (Рисунок 1)</li>
-    <li>Разархивировать содержимое папки basic в любую папку (Рисунок 2)</li>
-    <li>Скачать архив с файлами из репозитория (Рисунок 3)</li>
-    <li>Скопировать с заменой все файлы из архива репозитория в папку с Yii 2 (Рисунок 4)</li>
+    <li>Скачать Yii2 basic template</li>
+    <li>Разархивировать содержимое папки basic в любую папку</li>
+    <li>Скачать архив с файлами из репозитория (Рисунок 1)</li>
+    <li>Скопировать с заменой все файлы из архива репозитория в папку с Yii</li>
 </ul>
+
+<a class="btn btn-lg btn-default btn-block download-btn" href="https://github.com/yiisoft/yii2/releases/download/2.0.49/yii-basic-app-2.0.49.tgz">
+						<img alt="tar gz" src="/image/tgz.svg">
+						<span>Cкачать Yii2 Basic Template</span></a>
 
 <img src="https://webformyself.com/wp-content/uploads/2017/300/1.jpg"></img>
 
