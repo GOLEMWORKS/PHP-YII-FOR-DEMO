@@ -6,9 +6,8 @@
     <li>Скопировать с заменой все файлы из архива репозитория в папку с Yii</li>
 </ul>
 
-<a class="btn btn-lg btn-default btn-block download-btn" href="https://github.com/yiisoft/yii2/releases/download/2.0.49/yii-basic-app-2.0.49.tgz">
-						<img alt="tar gz" src="/image/tgz.svg">
-						<span>Cкачать Yii2 Basic Template</span></a>
+<a href="https://github.com/yiisoft/yii2/releases/download/2.0.49/yii-basic-app-2.0.49.tgz">
+<span>Cкачать Yii2 Basic Template</span></a>
 
 <img src="https://webformyself.com/wp-content/uploads/2017/300/1.jpg"></img>
 
