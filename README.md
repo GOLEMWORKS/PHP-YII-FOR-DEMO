@@ -7,13 +7,15 @@
 </ul>
 
 <h2>После установки требуется зайти в PhPMyAdmin и создать базу данных "Yii2basic", а так же несколько таблиц. Код для таблиц представлен ниже. Всё это копируем в раздел SQL в БД.</h2>
-<xmp>
-    CREATE TABLE IF NOT EXISTS `user` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `username` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL,
-  `role` varchar(255) NOT NULL DEFAULT 'user',
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `username` (`username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
-</xmp>
+<pre>
+    <code>
+        CREATE TABLE IF NOT EXISTS `user` (
+          `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+          `username` varchar(255) NOT NULL,
+          `password` varchar(255) NOT NULL,
+          `role` varchar(255) NOT NULL DEFAULT 'user',
+          PRIMARY KEY (`id`),
+          UNIQUE KEY `username` (`username`)
+        ) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+    </code>
+</pre>
