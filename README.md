@@ -1,5 +1,5 @@
 <h1>Чтобы файлы из этого репозитория запустились нужно сделать следующее:</h1>
-<ul>
+<ol>
     <li>
         Скачать Yii2 basic template: <a href="https://github.com/yiisoft/yii2/releases/download/2.0.49/yii-basic-app-2.0.49.tgz">
 <span>Тык</span></a>
@@ -7,7 +7,7 @@
     <li>Разархивировать содержимое папки basic в любую папку</li>
     <li>Скачать архив с файлами из репозитория (Рисунок 1)</li>
     <li>Скопировать с заменой все файлы из архива репозитория в папку с Yii</li>
-</ul>
+</ol>
 
 <img src="https://i.imgur.com/7wsK9lB.png"></img>
 
